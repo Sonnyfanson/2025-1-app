@@ -38,5 +38,6 @@ public class MainActivity extends AppCompatActivity {
     public void onClicked(View view) {
         String str = eText.getText().toString();
         textView.setText(str);
+
     }
 }
