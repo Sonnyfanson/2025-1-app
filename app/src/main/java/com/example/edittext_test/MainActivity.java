@@ -15,9 +15,15 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
 
-    private EditText eText;
+
+    private EditText etextId;
+    private EditText etextPassword;
+    private EditText ephone;
+
     private Button eButton;
     private TextView textView;
+    private TextView textPasswordView;
+    private TextView phoneView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,14 +36,22 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        eText = (EditText) findViewById(R.id.edittext);
+        etextId = (EditText) findViewById(R.id.textId);
+        etextPassword = (EditText) findViewById(R.id.textPassword);
+        ephone = (EditText) findViewById(R.id.phone);
         eButton = (Button) findViewById(R.id.button);
-        textView = (TextView) findViewById(R.id.textview);
+        textView = (TextView) findViewById(R.id.textView);
+        textPasswordView = (TextView) findViewById(R.id.textPasswordView);
+        phoneView = (TextView) findViewById(R.id.phoneView);
     }
 
     public void onClicked(View view) {
-        String str = eText.getText().toString();
-        textView.setText(str);
+        String str = etextId.getText().toString();
+        String str1 = etextPassword.getText().toString();
+        String str2 = ephone.getText().toString();
 
+        textView.setText("아이디: " + str);
+        textPasswordView.setText("패스워드: " + str1);
+        phoneView.setText("전화 번호: " + str2);
     }
 }
